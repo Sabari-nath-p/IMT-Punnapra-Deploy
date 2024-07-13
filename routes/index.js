@@ -55,7 +55,11 @@ router.get('/admission-enquiry',function(req,res,next){
   res.render('admission-enquiry');
 });
 
-router.post('/send-mail', multer().fields([{ name: 'profileImage', maxCount: 1 }, { name: 'signImage', maxCount: 1 }]), async function(req, res, next) {
+router.get('/gallary', function (req, res, next) {
+  res.render('gallary');
+});
+
+router.post('/send-mail', multer().fields([{ name: 'profileImage', maxCount: 1 }, { name: 'signImage', maxCount: 1 }]), async function (req, res, next) {
 
   const currentDate = new Date();
   const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Adding 1 to get the current month
