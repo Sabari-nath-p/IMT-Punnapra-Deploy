@@ -216,8 +216,7 @@
                             <h2>Join With US</h2>
                         </div> <!-- section title -->
                         <div class="main-form pt-45">
-                            <form id="submit-form"
-                                action="https://script.google.com/macros/s/AKfycbwl8V7vu5AfKcmgbzGyIoXDr_sIPF1IIv9J4eGxq0N7BFbk5shCC0OrmhK2rn-wHCgX/exec">
+                           <form action="/send-mail" method="post" data-toggle="validator" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="singel-form form-group">
@@ -415,21 +414,17 @@
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="singel-form form-group">
-                                            <label for="">Profile Photo </label>
-                                            <input name="Profile-photo" type="text"
-                                                placeholder="Profile Photo(Upload Drive Link)"
-                                                data-error="field is required." required="required">
+                                            <label for="">Profile Photo</label>
+                                            <input name="profileImage" type="file" accept="image/*" style="height: 35px;" placeholder="profile image" data-error="field is required." required="required">
                                             <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
+                                        </div> <!-- singel form --> 
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="singel-form form-group">
-                                            <label for="">Signature</label>
-                                            <input name="signature" type="text"
-                                                placeholder="Signature (Upload Drive Link)"
-                                                data-error="field is required." required="required">
+                                            <label for="">Your Signature</label>
+                                            <input name="signImage" type="file" accept="image/*" style="height: 35px;" placeholder="signature image" data-error="field is required." required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
@@ -575,7 +570,7 @@
     <!--====== BACK TO TP PART ENDS ======-->
 
 
-    <script>
+<!--<script>
         $("#submit-form").submit((e) => {
             e.preventDefault()
             $.ajax({
@@ -593,7 +588,7 @@
                 }
             })
         })
-    </script>
+    </script>  -->
 
 
 
@@ -633,6 +628,9 @@
 
     <!--====== Main js ======-->
     <script src="/javascripts/main.js"></script>
+
+    <!--====== index js ======-->
+    <script src="/routes/index.js"></script>
 
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>

@@ -348,7 +348,7 @@ router.post('/grievance-mail', multer().single('image'), async (req, res, next) 
 
       const mailOptions = {
         from: recipientEmail,
-        to: ['imtdirector@gmail.com'],
+        to: [''],
         subject: 'Grievance',
         html: `<h1>Name: ${name}</h1><br><p>Category: ${category}</p><br><p>Grievance: ${grievance}</p><br>Email: ${recipientEmail}<br>Phone: ${phone}`,
       };
